@@ -21,8 +21,9 @@ export default function Contact() {
     setLoading(true);
 
         try {
-      const API_URL = process.env.REACT_APP_API_URL;
-      await axios.post(`${API_URL}/api/contact`, formData);
+      const API_URL = import.meta.env.VITE_API_URL;
+await axios.post(`${API_URL}/api/contact`, formData);
+
       setStatus('Message envoyé avec succès !');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {

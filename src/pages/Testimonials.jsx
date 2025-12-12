@@ -9,11 +9,13 @@ function Testimonials() {
   const testimonialsPerPage = 6;
 
   useEffect(() => {
-    const API_URL = process.env.REACT_APP_API_URL;
-    axios.get(`${API_URL}/api/testimonials`)
-      .then(res => setTestimonials(res.data))
-      .catch(err => console.error(err));
-  }, []);
+  const API_URL = import.meta.env.VITE_API_URL;
+  axios
+    .get(`${API_URL}/api/testimonials`)
+    .then((res) => setTestimonials(res.data))
+    .catch((err) => console.error(err));
+}, []);
+
 
 
   // Pagination
