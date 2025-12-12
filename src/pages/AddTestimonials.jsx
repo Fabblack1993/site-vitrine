@@ -14,12 +14,11 @@ function AddTestimonial() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const res = await fetch("http://localhost:5000/api/testimonials", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
+const res = await fetch("https://backend-nftsolutions.onrender.com/api/testimonials", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(form),
+});
 
     const data = await res.json();
 

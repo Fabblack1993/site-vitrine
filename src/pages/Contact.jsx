@@ -20,13 +20,15 @@ export default function Contact() {
     setStatus("");
     setLoading(true);
 
-    try {
-      await axios.post("http://localhost:5000/api/contact", formData);
-      setStatus("Message envoyé avec succès !");
-      setFormData({ name: "", email: "", message: "" });
+        try {
+      const API_URL = process.env.REACT_APP_API_URL;
+      await axios.post(`${API_URL}/api/contact`, formData);
+      setStatus('Message envoyé avec succès !');
+      setFormData({ name: '', email: '', message: '' });
     } catch (error) {
-      setStatus("Erreur lors de l’envoi.");
+      setStatus("Échec de l'envoi. Réessayez.");
     }
+
 
     setLoading(false);
   };

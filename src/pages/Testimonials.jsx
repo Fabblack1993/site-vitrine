@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 import "./Testimonials.css";
 
 function Testimonials() {
@@ -8,11 +9,12 @@ function Testimonials() {
   const testimonialsPerPage = 6;
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/testimonials")
-      .then((res) => res.json())
-      .then((data) => setTestimonials(data))
-      .catch((err) => console.error(err));
+    const API_URL = process.env.REACT_APP_API_URL;
+    axios.get(`${API_URL}/api/testimonials`)
+      .then(res => setTestimonials(res.data))
+      .catch(err => console.error(err));
   }, []);
+
 
   // Pagination
   const indexOfLast = currentPage * testimonialsPerPage;

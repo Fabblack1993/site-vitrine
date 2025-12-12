@@ -3,16 +3,21 @@ import { useEffect, useState } from 'react';
 function AdminDashboard() {
   const [testimonials, setTestimonials] = useState([]);
 
-  useEffect(() => {
-    fetch('http://localhost:5000/api/testimonials')
+ useEffect(() => {
+    const API_URL = process.env.REACT_APP_API_URL;
+    fetch(`${API_URL}/api/testimonials`)
       .then(res => res.json())
-      .then(data => setTestimonials(data));
+      .then(data => setTestimonials(data))
+      .catch(err => console.error(err));
   }, []);
 
+
   const handleDelete = async (id) => {
-    await fetch(`http://localhost:5000/api/testimonials/${id}`, { method: 'DELETE' });
+    const API_URL = process.env.REACT_APP_API_URL;
+    await fetch(`${API_URL}/api/testimonials/${id}`, { method: 'DELETE' });
     setTestimonials(testimonials.filter(t => t._id !== id));
   };
+
 
   return (
     <div className="container mt-5">
