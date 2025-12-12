@@ -1,0 +1,103 @@
+/* === Section WHY ME === */
+.whyme-section {
+  background: linear-gradient(145deg, #0d1117, #111827);
+  color: #e0e0e0;
+  padding: 60px 0; /* 🔽 Réduit l’espace vertical (avant 100px) */
+  text-align: center;
+  border-radius: 20px;
+  margin: 30px auto; /* 🔽 Réduit la marge externe (avant 50px) */
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  transition: all 0.4s ease-in-out;
+}
+
+.whyme-section:hover {
+  box-shadow: 0 0 35px rgba(0, 255, 255, 0.25);
+}
+
+/* === Titre principal === */
+.whyme-section h2 {
+  font-size: 2.3rem; /* 🔽 Légèrement réduit pour un meilleur équilibre */
+  font-weight: 700;
+  background: linear-gradient(90deg, #00f5ff, #00ffaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px; /* 🔽 Moins d’espace sous le titre (avant 50px) */
+  margin-top: 0; /* 🔽 Supprime tout espace inutile au-dessus */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* === Cartes de raisons === */
+.whyme-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 25px; /* 🔽 Légèrement réduit */
+  margin: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+.whyme-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+  border-color: rgba(0, 255, 255, 0.6);
+}
+
+/* === Titres des cartes === */
+.whyme-card h3 {
+  font-size: 1.4rem;
+  color: #00ffee;
+  margin-bottom: 10px;
+}
+
+/* === Texte des cartes === */
+.whyme-card p {
+  color: #b0b0b0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* === Layout responsive === */
+.whyme-grid {
+  display: flex;
+  flex-direction: row;          /* cartes en ligne */
+  justify-content: center;      /* centrage horizontal */
+  align-items: stretch;         /* même hauteur */
+  gap: 24px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1100px;            /* 🔽 léger ajustement pour centrage équilibré */
+  padding: 20px 20px;           /* 🔽 moins de padding interne (avant 40px) */
+  box-sizing: border-box;
+}
+
+/* chaque carte */
+.whyme-card {
+  background: rgba(255,255,255,0.02);
+  border-radius: 12px;
+  padding: 24px 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  flex: 1 1 300px;
+  min-width: 260px;
+  max-width: 360px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* responsive: empile verticalement sous 768px */
+@media (max-width: 767.98px) {
+  .whyme-grid {
+    flex-direction: column;
+    gap: 18px;
+    padding: 24px 12px;
+  }
+  .whyme-card {
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+

@@ -1,0 +1,108 @@
+/* 🌌 Style général - ambiance tech futuriste */
+body {
+  background: radial-gradient(circle at top left, #1a2238, #0a0f1c);
+  color: #e5e7eb;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* 🌟 Navbar sombre élégante */
+
+.navbar {
+  background: rgba(13, 17, 23, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0,255,200,0.1);
+  padding: 12px 40px;
+}
+
+.navbar a {
+  color: #e5e7eb !important;
+  transition: color 0.3s ease;
+}
+.navbar a.active {
+  border-bottom: 2px solid #00ffaa;
+  padding-bottom: 4px;
+}
+
+.navbar a:hover {
+  color: #00ffaa;
+  text-shadow: 0 0 10px rgba(0,255,200,0.7);
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* ✨ Titres lumineux */
+h1, h2, h3 {
+  background: linear-gradient(90deg, #00f5ff, #00ff87);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
+}
+
+/* 💡 Sections avec profondeur */
+section {
+  background: rgba(17, 24, 39, 0.6);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 0 25px rgba(0, 245, 255, 0.05);
+  backdrop-filter: blur(6px);
+  
+}
+p {
+
+  color: white;
+}
+
+/* 🚀 Bouton néon */
+.cta-button {
+  background: linear-gradient(90deg, #00f5ff, #00ff87);
+  border: none;
+  color: #0a0f1c;
+  font-weight: 600;
+  padding: 0.9rem 2rem;
+  border-radius: 9999px;
+  box-shadow: 0 0 20px rgba(0, 245, 255, 0.4);
+  transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.6);
+    text-decoration: none;
+}
+.section p {
+  color: #ffffff; /* 🔥 texte blanc bien visible */
+  font-size: 1.1rem;
+  margin-top: 10px;
+  margin-bottom: 55px;
+  
+  
+}
+
+
+/* 🧠 Images technologies */
+.tech-logo {
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(0, 245, 255, 0.6);
+}
+
+/* 🦶 Footer sobre et moderne */
+footer {
+  background-color: #0d1117;
+  color: #9ca3af;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  box-shadow: 0 -2px 10px rgba(0, 245, 255, 0.1);
+}

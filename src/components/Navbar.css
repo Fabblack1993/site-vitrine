@@ -1,0 +1,82 @@
+/* === NAVBAR MODERNE AVEC BARRE DE PROGRESSION === */
+.navbar {
+  background: #0d1117 !important;
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.05);
+  transition: all 0.3s ease-in-out;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.navbar {
+  height: 70px; /* fixe la hauteur de la navbar */
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 115px; /* 🔹 augmente la taille du logo */
+  width: auto;
+  object-fit: contain;
+  transform: translateY(2px); /* léger recentrage vertical */
+}
+
+
+
+
+
+.navbar-logo:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 6px #00fff2);
+}
+/* Logo */
+
+
+/* Liens de navigation */
+.navbar-nav .nav-link {
+  position: relative;
+  color: #e0e0e0 !important;
+  font-weight: 500;
+  margin-left: 18px;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+/* Barre de progression */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #00f5ff, #00ffaa);
+  transition: width 0.4s ease-in-out;
+}
+
+/* Effet hover */
+.navbar-nav .nav-link:hover {
+  color: #00ffaa !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Lien actif (optionnel) */
+.navbar-nav .nav-link.active {
+  color: #00ffaa !important;
+}
+
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  .navbar-nav .nav-link {
+    margin: 10px 0;
+  }
+
+  .navbar-nav .nav-link::after {
+    left: 0;
+  }
+}

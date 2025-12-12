@@ -1,0 +1,10 @@
+.testimonial-message {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  font-style: italic;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
