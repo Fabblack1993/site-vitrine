@@ -72,11 +72,47 @@
 
 /* Mobile */
 @media (max-width: 991px) {
-  .navbar-nav .nav-link {
-    margin: 10px 0;
+  .navbar {
+    height: 60px; /* réduit la hauteur sur mobile */
+    padding: 0 1rem;
   }
 
-  .navbar-nav .nav-link::after {
-    left: 0;
+  .navbar-logo {
+    height: 40px; /* logo plus petit sur mobile */
+  }
+
+  .navbar-toggler {
+    display: block;
+    margin-left: auto; /* pousse le burger à droite */
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 60px; /* même hauteur que la navbar mobile */
+    right: -100%;
+    width: 100%; /* occupe toute la largeur */
+    height: calc(100% - 60px);
+    background: rgba(13, 17, 23, 0.95);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 2rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease-in-out;
+  }
+
+  .navbar-menu.open {
+    right: 0; /* fait apparaître le menu */
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .navbar-nav .nav-link {
+    line-height: normal; /* évite le décalage vertical */
+    font-size: 1.1rem;   /* lisible sur mobile */
   }
 }
+
