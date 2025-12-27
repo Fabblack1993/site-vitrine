@@ -57,7 +57,7 @@ function Services() {
             textShadow: "0 0 12px rgba(0,255,213,0.4)",
           }}
         >
-          Nos Services
+       Nos Services
         </h2>
         <div
           style={{
