@@ -122,6 +122,10 @@ footer {
    🌐 Responsive CSS
    ============================== */
 
-
+@media (max-width: 991px) {
+  body {
+    padding-top: 70px; /* hauteur réelle de la navbar */
+  }
+}
 
 
